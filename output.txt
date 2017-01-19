@@ -1,0 +1,60 @@
+d:\Temp>trains routes.txt /i:commands.txt /v
+
+#
+# Routes table
+#
+# AB5, AD5, AE7
+# BC4
+# CD8, CE2
+# DC8, DE6
+# EB3
+
+# dist "A-B-C"
+# A-B-C (dist: 9; stops: 2)
+9
+
+# dist "A-D"
+# A-D (dist: 5; stops: 1)
+5
+
+# dist "A-D-C"
+# A-D-C (dist: 13; stops: 2)
+13
+
+# dist "A-E-B-C-D"
+# A-E-B-C-D (dist: 22; stops: 4)
+22
+
+# dist "A-E-D"
+NO SUCH ROUTE
+
+# routes "C..C" [stops <= 3]
+# C-E-B-C (dist: 9; stops: 3)
+# C-D-C (dist: 16; stops: 2)
+2
+
+# routes "A..C" [stops == 4]
+# A-D-E-B-C (dist: 18; stops: 4)
+# A-B-C-D-C (dist: 25; stops: 4)
+# A-D-C-D-C (dist: 29; stops: 4)
+3
+
+# dist "A..C"
+# A-B-C (dist: 9; stops: 2)
+9
+
+# dist "B..B"
+# B-C-E-B (dist: 9; stops: 3)
+9
+
+# routes "C..C" [dist < 30]
+# C-E-B-C (dist: 9; stops: 3)
+# C-D-C (dist: 16; stops: 2)
+# C-E-B-C-E-B-C (dist: 18; stops: 6)
+# C-D-E-B-C (dist: 21; stops: 4)
+# C-D-C-E-B-C (dist: 25; stops: 5)
+# C-E-B-C-D-C (dist: 25; stops: 5)
+# C-E-B-C-E-B-C-E-B-C (dist: 27; stops: 9)
+7
+
+d:\Temp>

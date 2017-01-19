@@ -1,0 +1,51 @@
+#
+# Commands format:
+#
+#   <name> <path> [<limit>]
+#
+# Where:
+#
+#   name    - Name of the command (case insensitive).
+#
+#             Currently supported commands:
+#
+#               'dist'    - Calculates shortest distance
+#               'routes'  - Calculates number of possible routes
+#               'stops'   - Calculates minimal number of stops
+#               'help'    - Outputs list of supported commands
+#               'exit'    - Terminates further processing
+#
+#   path    - Graph path to travel/calculate.
+#
+#             Route is described as following:
+#               'A-B'     - Direct travel between A and B
+#               'A..B'    - Any possible route between A and B
+#
+#   limit   - (optional) Limits to apply during search/calculation.
+#
+#             Limits can apply to 'dist' or 'stops', and are described
+#             in form of boolean condition (C# language syntax).
+#             For example: 'stops == 5', or 'dist <= 20'.
+#
+# Notes:
+#           - Empty lines are ignored
+#           - Comments start with '#' character
+#
+# Examples:
+#
+#   dist A-B-C
+#   dist A..C
+#   routes C..C [stops <= 3]
+#   stops A-B..E
+#   exit
+
+dist A-B-C
+dist A-D
+dist A-D-C
+dist A-E-B-C-D
+dist A-E-D
+routes C..C [stops <= 3]
+routes A..C [stops == 4]
+dist A..C
+dist B..B
+routes C..C [dist < 30]

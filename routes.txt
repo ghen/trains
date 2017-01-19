@@ -1,0 +1,18 @@
+#
+# Routes graph definition
+#
+# Rules:
+#   - AB5, BC4, .. => defines route from 'A' to 'B' with distance '5', 'B' to 'C' with distance 
+#   - Distance value should not exceed Int16.MaxValue (e.g. 32767)
+#   - Loop routes are ignored (e.g. 'AA5')
+#   - Duplicate route overrides previous value
+#
+# NOTES:
+#   - Empty lines are ignored
+#   - Comments start with '#' character
+
+AB5, AD5, AE7
+BC4,
+CD8, CE2
+DC8, DE6
+EB3
