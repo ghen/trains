@@ -144,4 +144,5 @@ For example, the first problem means to start at city A, then travel directly to
 
 # Support #
 
-Send your questions to Eugene (<yarshevich@gmail.com>).
+Send your questions to Eugene (yarshevich [att] gmail [dott] com).
+Git: https://github.com/ghen/trains
